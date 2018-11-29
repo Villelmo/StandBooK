@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="functions.js"></script>	
 </head>
 
-<body>
+<body body class="fixed-header">
 
 <header id="header">
     <div class="container">

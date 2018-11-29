@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="functions.js"></script>	
 </head>
 
-<body>
+<body body class="fixed-header">
 
 <header id="header">
     <div class="container">
@@ -126,9 +126,9 @@
                     <li class="has-dropdown">
                       <a href="#">Usuarios</a>
                       <ul>
-                        <li><a href="#">Perfil</a></li>
-                        <li><a href="#">Iniciar sesión</a></li>
-                        <li><a href="#">Register</a></li>
+                      <li><a href="perfil.html">Perfil</a></li>
+                      <li><a href="login.html">Iniciar sesi149n</a></li>
+                      <li><a href="nuevoregistro.php">Register</a></li>
                       </ul>
                     </li>
                     <li><a href="#">Contacto</a></li>
@@ -140,8 +140,8 @@
           </div>
           <div class="nav navbar-right">
             <ul>
-              <li class="hidden-xs-down"><a href="#">Iniciar Sesión</a></li>
-              <li class="hidden-xs-down"><a href="#">Registrarse</a></li>
+              <li class="hidden-xs-down"><a href="login.html">Iniciar Sesi149n</a></li>
+              <li class="hidden-xs-down"><a href="nuevoregistro.php">Registrarse</a></li>
               <li><a data-toggle="search"><i class="fa fa-search"></i></a></li>
             </ul>
           </div>
