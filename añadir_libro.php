@@ -25,7 +25,7 @@
             <input type="textarea" rows="2" cols="50" name="descripcion" placeholder="descripcion_del_libro" class="formulario_input">
               <input type="text" name="editorial" placeholder="editorial" class="formulario_input"> 
               <input type="text" name="autor" placeholder="autor" class="formulario_input">   
-              <input type="file" name="imagen" placeholder="imagen" class="formulario_input">  
+              <input type="file" name="foto" placeholder="imagen" class="formulario_input">  
               <input type="number" name="precio" placeholder="valor en cordobas del libro" class="formulario_input">          
             <input type="submit" name="guardar"  value="Guardar" class="formulario_input">
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
@@ -40,10 +40,13 @@
 				$idioma=$_POST["idioma"];
 				$descripcion=$_POST["descripcion"];
                 $editorial=$_POST["editorial"];
+                $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
+                $foto=$_FILES["foto"];
+                
 				$codigo=1;
 				
-                    mysqli_query($con,"INSERT INTO libros VALUES('$codigo','$titulo','$idioma','$descripcion','$direccion')");
+                    mysqli_query($con,"INSERT INTO libros VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$foto','$descripcion')");
 					$codigo=$codigo+1;
 					
 					echo "datos guardados";
