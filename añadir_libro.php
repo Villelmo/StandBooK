@@ -24,7 +24,8 @@
             <input type="text" name="idioma" placeholder="idioma" class="formulario_input">
             <input type="textarea" rows="2" cols="50" name="descripcion" placeholder="descripcion_del_libro" class="formulario_input">
               <input type="text" name="editorial" placeholder="editorial" class="formulario_input"> 
-              <input type="text" name="autor" placeholder="autor" class="formulario_input">              
+              <input type="text" name="autor" placeholder="autor" class="formulario_input">   
+              <input type="text" name="autor" placeholder="autor" class="formulario_input">            
             <input type="submit" name="guardar"  value="Guardar" class="formulario_input">
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
 			</form>
