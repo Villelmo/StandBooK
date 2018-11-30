@@ -225,15 +225,10 @@
 
                 $query = "INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
               
-                $resultado = $con->query($query);
-
-        $consul="SELECT * from libros";
-        $resul=mysqli_query($con,$consul);
-                
+                $resultado = $con->query($query);               
 				
 				
-        
-        ?>
+       ?>
 
     <footer id="footer">
     <div class="container">
