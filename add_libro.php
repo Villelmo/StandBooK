@@ -220,11 +220,13 @@
                 $editorial=$_POST["editorial"];
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
+$codigo=4;
+                $tabla="libros";
                
                 $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
-
-                
-                $codigo=2;
+ 
+               
+                //$codigo=2;
                 
                 $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
 					
