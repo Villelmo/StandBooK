@@ -228,7 +228,7 @@
                 $codigo=$resultado->num_rows;
                 $codigo=$codigo+1;
                 
-                $sql="INSERT INTO libros(id,nombre,apellido,sexo,edad,direccion,imagen)VALUES('$codigo','$nombre','$apellido','$sexo','$edad','$direccion','$imagen')";
+                $sql="INSERT INTO autor(id,nombre,apellido,sexo,edad,direccion,imagen)VALUES('$codigo','$nombre','$apellido','$sexo','$edad','$direccion','$imagen')";
 					
 					
                 if ($con->query($sql) === TRUE) {
