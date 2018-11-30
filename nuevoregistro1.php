@@ -174,6 +174,7 @@
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
 			</form>
     </div>
+</section>
 			<?php
 			include("conexion.php");
 			
@@ -207,7 +208,56 @@
    
 			
 			
-			?>
+            ?>
+            
+    <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-5">
+          <h4 class="footer-title">ACERCA DE STANDBOOK</h4>
+          <p>Standbook es una plataforma que pretende facilitar la busqueda de libros en el pais, podras publicar tus libros de una forma totalmente gratuita.</p>
+          <p>Busqueda en cientos de tiendas en todo Nicaragua desde un solo clic, ahorrate hasta un 95% en publicidad de libros. Busca y publica tus libros de una forma totalmente facil y rapida.</p>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <h4 class="footer-title">Platformas</h4>
+          <div class="row">
+            <div class="col">
+              <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Android</a></li>
+                <li><a href="#">iOS</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><a href="#">Libros</a></li>
+                <li><a href="#">Opiniones</a></li>
+                <li><a href="videos.html">Videos</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <h4 class="footer-title">Subscribete</h4>
+          <p>Puedes suscribirte a nuestro buscador de libros reciba notificaciones cuando halla nuevos libros Disponibles.</p>
+          <div class="input-group m-t-25">
+            <input type="text" class="form-control" placeholder="Correo">
+            <span class="input-group-btn">
+            <button class="btn btn-primary" type="button">Subscribete</button>
+          </span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="https://www.facebook.com/StandBookNic" target="_blank" data-toggle="tooltip" title="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/StandBook1" target="_blank" data-toggle="tooltip" title="twitter"><i class="fa fa-twitter"></i></a>
+          <!--<a href="#" target="_blank" data-toggle="tooltip" title="youtube"><i class="fa fa-youtube"></i></a>-->
+          <a href="https://www.instagram.com/standbook_nic" target="_blank" data-toggle="tooltip" title="instagram"><i class="fa fa-instagram"></i></a>        </div>
+        <p>Copyright &copy; 2018 <a href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank">Standbook</a>. Todos los derechos recervados.</p>
+      </div>
+    </div>
+  </footer>
 			
 </body>
 </html>
