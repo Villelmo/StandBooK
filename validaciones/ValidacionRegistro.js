@@ -12,11 +12,13 @@ function validar()
 		alert("Todos los campos son obligatorios");
 		return false;
 	}
-
-	if(contra != recontra)
+      contra=md5(contra);
+    	if(contra != recontra)
 	{
-		alert("las contraseñas deben ser identicas");
-		return false;
+		alert("lo sentimos pero las contraseñas deben ser identicas");
+		return nuevoregistro1.php;
 	}
+
+
 }
 
