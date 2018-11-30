@@ -229,7 +229,7 @@
 
 					$id=$id+1;
 					
-				
+				header("Location: perfil.html");
 				
             }
 

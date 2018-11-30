@@ -220,11 +220,15 @@
                 $editorial=$_POST["editorial"];
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
-                $codigo=2;
                 $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+               $foto=$_FILES["imagen"]["titulo"];
+                $destino="fotos/".$foto;
+                copy($imagen,$destino);
 
                 
-              
+
+                $codigo=mysqli_fetch_array(); 
+               
                 
                 $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
 					
