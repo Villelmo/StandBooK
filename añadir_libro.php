@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="css/theme.min.css">
   <link rel="stylesheet" href="css/custom.css">
 
-	<script type="text/javascript" src="functions.js"></script>	
+	<script type="text/javascript" src="functions.js"></script>
+  <script src="validacion/validacion.js"></script>
 </head>
 
 <body body class="fixed-header">
@@ -166,13 +167,13 @@
 			<form action="añadir_libro.php" method="POST" name="formu" id="formula" class="formulario" enctype="multipart/form-data">
 			<h1 class="formulario_titulo">Registro de libro</h1>
 	
-            <input type="text" name="titulo" placeholder="titulo del libro" class="formulario_input">
-            <input type="text" name="idioma" placeholder="idioma" class="formulario_input">
-            <input type="textarea" rows="2" cols="50" name="descripcion" placeholder="descripcion_del_libro" class="formulario_input">
-              <input type="text" name="editorial" placeholder="editorial" class="formulario_input"> 
-              <input type="text" name="autor" placeholder="autor" class="formulario_input">   
-              <input type="file" name="foto" placeholder="imagen" class="formulario_input">  
-              <input type="number" name="precio" placeholder="valor en cordobas del libro" class="formulario_input">          
+            <input type="text" id="titulo" name="titulo" placeholder="titulo del libro" class="formulario_input">
+            <input type="text" id="idioma" name="idioma" placeholder="idioma" class="formulario_input">
+            <input type="textarea" rows="2" cols="50" id="descripcion" name="descripcion" placeholder="descripcion_del_libro" class="formulario_input">
+              <input type="text" id="editorial" name="editorial" placeholder="editorial" class="formulario_input"> 
+              <input type="text" id="autor" name="autor" placeholder="autor" class="formulario_input">   
+              <input type="file" id="foto" name="foto" placeholder="imagen" class="formulario_input">  
+              <input type="number" id="precio" name="precio" placeholder="valor en cordobas del libro" class="formulario_input">          
             <input type="submit" name="guardar"  value="Guardar" class="formulario_input">
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
 			</form>
