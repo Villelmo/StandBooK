@@ -220,6 +220,8 @@
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
 
+        $consul="SELECT * from libros";
+        $resul=mysqli_query($con,$consul);
                 
 				$codigo=2;
 				
