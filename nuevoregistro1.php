@@ -194,12 +194,12 @@
 			<form action="nuevoregistro1.php" method="POST" name="formu" id="formula" class="formulario">
 			<h1 class="formulario_titulo">Registro</h1>
 	
-            <input type="text" name="nombre" placeholder="nombre" class="formulario_input">
-            <input type="textarea" rows="3" cols="50" name="direccion" placeholder="direccion" class="formulario_input">
-            <input type="text" name="telefono" placeholder="telefono" class="formulario_input">
-              <input type="password" name="contraseña" placeholder="clave" class="formulario_input"> 
-              <input type="password" name="re_contraseña" placeholder="repetir clave" class="formulario_input">              
-            <input type="submit" name="guardar"  value="Guardar" class="formulario_input" href="perfil.html">
+            <input type="text" name="nombre" id="nombre" placeholder="nombre" class="formulario_input">
+            <input type="textarea" rows="3" cols="50" id="direccion" name="direccion" placeholder="direccion" class="formulario_input">
+            <input type="text" name="telefono" id="telefono" placeholder="telefono" class="formulario_input">
+              <input type="password" name="contraseña" id="contraseña" placeholder="clave" class="formulario_input"> 
+              <input type="password" name="re_contraseña" id="re_contraseña" placeholder="repetir clave" class="formulario_input">              
+            <input type="submit" name="guardar"  value="Guardar" class="formulario_input" href="perfil.html" onclick="validar();">
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
 			</form>
     </div>
@@ -287,6 +287,8 @@
       </div>
     </div>
   </footer>
-			
+      
+  <script src="validaciones/ValidacionRegistro.js"></script>
+
 </body>
 </html>
