@@ -6,13 +6,13 @@ function validar()
 	telefono = document.getElementById("telefono").value;
 	contra = document.getElementById("contraseña").value;
 	recontra = document.getElementById("re_contraseña").value;
-
+    
 	if(nombre == "" || direccion == "" || telefono == "" || contra == "" || recontra == "")
 	{
 		alert("Todos los campos son obligatorios");
 		return false;
 	}
-
+     var cripto=btoa(contra);
 	if(contra != recontra)
 	{
 		alert("las contraseñas deben ser identicas");

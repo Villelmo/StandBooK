@@ -223,9 +223,17 @@
                 $codigo=2;
                 $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
-                $query = "INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
+                
               
-                $resultado = $con->query($query);               
+                
+                $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
+					
+					
+                if ($con->query($sql) === TRUE) {
+          echo "";
+      } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+      }             
 				
 				
        ?>
