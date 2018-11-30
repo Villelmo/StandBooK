@@ -1,3 +1,5 @@
 function validar() {
-	var usuario
+	var usuario, contraseña;
+
+	usuario = document.getElementById("usuario").value;
 }
