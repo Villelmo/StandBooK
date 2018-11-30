@@ -193,7 +193,7 @@
 <section class="bg-image bg-image-sm" style="background-image: url('img/bg/login.jpg');">
     <div class="overlay"></div>
     <div class="container">      
-			<form action="añadir_libro.php" method="POST" name="formu" id="formula" class="formulario" enctype="multipart/form-data">
+			<form action="add_libro.php" method="POST" name="formu" id="formula" class="formulario" enctype="multipart/form-data">
 			<h1 class="formulario_titulo">Registro de libro</h1>
 	
             <input type="text" id="titulo" name="titulo" placeholder="titulo del libro" class="formulario_input">
@@ -201,7 +201,6 @@
             <input type="textarea" rows="2" cols="50" id="descripcion" name="descripcion" placeholder="descripcion_del_libro" class="formulario_input">
               <input type="text" id="editorial" name="editorial" placeholder="editorial" class="formulario_input"> 
               <input type="text" id="autor" name="autor" placeholder="autor" class="formulario_input">   
-              <input type="file" id="foto" name="foto" placeholder="imagen" class="formulario_input">  
               <input type="number" id="precio" name="precio" placeholder="valor en cordobas del libro" class="formulario_input">          
             <input type="submit" name="guardar"  value="Guardar" class="formulario_input">
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
@@ -220,12 +219,11 @@
                 $editorial=$_POST["editorial"];
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
-                $foto=$_addslashes(file_get_contents($_FILES["foto"]["tmp_name"]));
 
                 
 				$codigo=1;
 				
-        $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,imagen,descripcion) VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$foto','$descripcion')";
+        $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion) VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion')";
 					
 					
         if ($con->query($sql) === TRUE) {
