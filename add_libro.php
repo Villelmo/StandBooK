@@ -193,7 +193,7 @@
 <section class="bg-image bg-image-sm" style="background-image: url('img/bg/login.jpg');">
     <div class="overlay"></div>
     <div class="container">      
-			<form action="añadir_libro.php" method="POST" name="formu" id="formula" class="formulario" enctype="multipart/form-data">
+			<form action="add_libro.php" method="POST" name="formu" id="formula" class="formulario" enctype="multipart/form-data">
 			<h1 class="formulario_titulo">Registro de libro</h1>
 	
             <input type="text" id="titulo" name="titulo" placeholder="titulo del libro" class="formulario_input">
