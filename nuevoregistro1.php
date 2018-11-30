@@ -218,7 +218,7 @@
                 $re_contraseña=$_POST["re_contraseña"];
 
 
-                $resultado = $con->query("SELECT * FROM librerias");
+                $resultado = $con->query("SELECT * FROM libreria");
                    
                 $id=$resultado->num_rows;
                 $id=$id+1;
@@ -233,9 +233,6 @@
     echo "Error: " . $sql . "<br>" . $con->error;
 }
 
-				
-					
-				header("Location: perfil.html");
 				
             }
 
