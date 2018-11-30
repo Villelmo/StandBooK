@@ -173,6 +173,8 @@
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
 			</form>
     </div>
+</section>
+			
 
     <footer id="footer">
     <div class="container">
@@ -225,7 +227,7 @@
     </div>
   </footer>
 
-			<?php
+		<?php
 			include("conexion.php");
 			
 			
@@ -243,13 +245,7 @@
 					echo "datos guardados";
 				
             }
-
+        ?>
             
-            
-
-			
-			
-			?>
-			
 </body>
 </html>
