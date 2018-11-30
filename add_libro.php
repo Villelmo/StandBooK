@@ -227,10 +227,9 @@
 
                 
                 $consul="SELECT * from libros";
-                $res=$con->query($consul);
-                while(mysqli_fetch_array($res)){
-                  $codigo=$codigo+1; 
-                }
+                $res=mysqli_connect($con,$consul);
+                
+                $codigo=mysql_num_rows($res);
                 
                
                 
