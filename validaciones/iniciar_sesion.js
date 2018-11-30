@@ -1,6 +1,11 @@
 function validar() {
-	var usuario, contraseña;
+	var usu, contra;
 
-	usuario = document.getElement("usuario").value;
-	contraseña = document.getElement("contraseña").value;
+	usu = document.getElementById("usuario").value;
+	contra = document.getElementById("contraseña").value;
+
+	if(usu === "" || contra === "")
+	{
+		alert("Todos los campos son obligatorios");
+	}
 }
