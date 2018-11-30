@@ -1,28 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-	<title>Registro</title>
-	<link rel="stylesheet" href="estil.css" type="text/css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-  <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="plugins/animate/animate.min.css">
-  <!-- theme css -->
-  <link rel="stylesheet" href="css/theme.min.css">
-  <link rel="stylesheet" href="css/custom.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Perfil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/animate/animate.min.css">
+    <link rel="stylesheet" href="estil.css">
 
-  <script type="text/javascript" src="functions.js"></script>	
-  <script type="text/javascript" src="validaciones/ValidacionRegistro.js"></script>
+    <!-- theme css -->
+    <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
-
 <body body class="fixed-header">
 	<!-- header -->
-     <header id="header">
+  <header id="header">
     <div class="container">
       <div class="navbar-backdrop">
         <div class="navbar">
           <div class="navbar-left">
             <a class="navbar-toggle"><i class="fa fa-bars"></i></a>
-            <a href="index.html" class="logo" style="color:white;"><img src="img/logo/busqueda1.png" alt="">STANDBOOK</a>
+            <a href="index.html" class="logo" style="color:white;">STANDBOOK</a>
             <nav class="nav">
               <ul>
                 <li class="has-dropdown mega-menu">
@@ -131,9 +132,9 @@
                 </li>
 
                 <li class="has-dropdown">
-                  <a href="#">Catalogo</a>
+                  <a href="#">El Foro</a>
                   <ul>
-                    <li><a href="Catalogo General.html">Catalogo General</a></li>
+                    <li><a href="Foros.html">Temas del foro</a></li>
                   </ul>
                 </li>
                 <li class="has-dropdown">
@@ -153,7 +154,6 @@
                     <li><a href="#">Galeria</a></li>
                     <li class="#">
                     </li>
-                    <li><a href="Foros.html">Foro</a></li>
                     <li class="has-dropdown">
                       <a href="#">Usuarios</a>
                       <ul>
@@ -188,57 +188,58 @@
       </div>
     </div>
   </header>
-<!--Header-->
+   <!-- /header -->
 
 <section class="bg-image bg-image-sm" style="background-image: url('img/bg/login.jpg');">
     <div class="overlay"></div>
     <div class="container">      
-			<form action="nuevoregistro1.php" method="POST" name="formu" id="formula" class="formulario">
-			<h1 class="formulario_titulo">Registro de tiendas</h1>
+			<form action="add_autor.php" method="POST" name="formu" id="formula" class="formulario" enctype="multipart/form-data">
+			<h1 class="formulario_titulo">Registro de autor</h1>
 	
-            <input type="text" name="nombre" id="nombre" placeholder="nombre" class="formulario_input">
-            <input type="textarea" rows="3" cols="50" id="direccion" name="direccion" placeholder="direccion" class="formulario_input">
-            <input type="text" name="telefono" id="telefono" placeholder="telefono" class="formulario_input">
-              <input type="password" name="contraseña" id="contraseña" placeholder="clave" class="formulario_input"> 
-              <input type="password" name="re_contraseña" id="re_contraseña" placeholder="repetir clave" class="formulario_input">              
-            <input type="submit" name="guardar"  value="Guardar" class="formulario_input" href="perfil.html" onclick="validar();">
+            <input type="text"  name="nombre" placeholder="nombre" class="formulario_input">
+            <input type="text" id="apellido" name="apellido" placeholder="apellido" class="formulario_input">
+            <input type="text" id="sexo" name="sexo" placeholder="masculino/femenino" class="formulario_input">
+            <input type="number" id="edad" name="edad" placeholder="edad" class="formulario_input"> 
+              <input type="text" id="direccion" name="direccion" placeholder="direccion" class="formulario_input">   
+              <input type="file" name="imagen" placeholder="imagen" class="formulario_input">          
+            <input type="submit" name="guardar"  value="Guardar" class="formulario_input">
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
 			</form>
     </div>
-</section>
-			<?php
+    </section>
+
+    <?php
 			include("conexion.php");
 			
 			
 			if(isset($_POST["guardar"])){
-				
 				$nombre=$_POST["nombre"];
-				$direccion=$_POST["direccion"];
-				$telefono=$_POST["telefono"];
-                $contraseña=$_POST["contraseña"];
-                $re_contraseña=$_POST["re_contraseña"];
+				$apellido=$_POST["apellido"];
+				$sexo=$_POST["sexo"];
+                $edad=$_POST["edad"];
+                $direccion=$_POST["direccion"];
 
-
-                $resultado = $con->query("SELECT * FROM libreria");
+                $tabla="autor";
+               
+                $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+ 
+                $resultado = $con->query("SELECT * FROM autor");
                    
-                $id=$resultado->num_rows;
-                $id=$id+1;
-			
-				
-                    $sql="INSERT INTO libreria(id,clave,nombre,direccion,telefono) VALUES('$id','$contraseña','$nombre','$direccion','$telefono')";
+                $codigo=$resultado->num_rows;
+                $codigo=$codigo+1;
+                
+                $sql="INSERT INTO libros(id,nombre,apellido,sexo,edad,direccion,imagen)VALUES('$codigo','$nombre','$apellido','$sexo','$edad','$direccion','$imagen')";
 					
 					
-					if ($con->query($sql) === TRUE) {
-    echo "";
-} else {
-    echo "Error: " . $sql . "<br>" . $con->error;
-}
-
+                if ($con->query($sql) === TRUE) {
+          echo "";
+      } else {
+          echo "Error: " . $sql . "<br>" . $con->error;
+      }             
+    }
 				
-            }
+       ?>
 
-            ?>
-            
     <footer id="footer">
     <div class="container">
       <div class="row">
@@ -279,16 +280,19 @@
       </div>
       <div class="footer-bottom">
         <div class="footer-social">
-          <a href="https://www.facebook.com/StandBookNic" target="_blank" data-toggle="tooltip" title="facebook"><i class="fa fa-facebook"></i></a>
-          <a href="https://twitter.com/StandBook1" target="_blank" data-toggle="tooltip" title="twitter"><i class="fa fa-twitter"></i></a>
-          <!--<a href="#" target="_blank" data-toggle="tooltip" title="youtube"><i class="fa fa-youtube"></i></a>-->
-          <a href="https://www.instagram.com/standbook_nic" target="_blank" data-toggle="tooltip" title="instagram"><i class="fa fa-instagram"></i></a>        </div>
+          <a href="#" target="_blank" data-toggle="tooltip" title="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" target="_blank" data-toggle="tooltip" title="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" target="_blank" data-toggle="tooltip" title="youtube"><i class="fa fa-youtube"></i></a>
+ 
+          <a href="#" target="_blank" data-toggle="tooltip" title="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
         <p>Copyright &copy; 2018 <a href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank">Standbook</a>. Todos los derechos recervados.</p>
       </div>
     </div>
-  </footer>
-      
- 
 
+  </footer>
+
+			
+			
 </body>
 </html>
