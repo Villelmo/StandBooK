@@ -8,7 +8,6 @@
 			
 				$con=mysqli_connect($host,$usuario,$clave,$basedatos) or die("error con el servidor");	
             
-                
-			?>
+?>
 			
 

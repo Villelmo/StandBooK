@@ -12,11 +12,18 @@ function validar()
 		alert("Todos los campos son obligatorios");
 		return false;
 	}
+<<<<<<< HEAD
+      contra=md5(contra);
+    	if(contra != recontra)
+=======
      var cripto=btoa(contra);
 	if(contra != recontra)
+>>>>>>> 7567cadcf10bf2e768a68525ae2a3c12031397b1
 	{
-		alert("las contraseñas deben ser identicas");
-		return false;
+		alert("lo sentimos pero las contraseñas deben ser identicas");
+		return nuevoregistro1.php;
 	}
+
+
 }
 
