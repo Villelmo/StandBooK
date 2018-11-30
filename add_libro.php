@@ -220,15 +220,11 @@
                 $editorial=$_POST["editorial"];
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
+               
                 $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
-               $foto=$_FILES["imagen"]["titulo"];
-                $destino="fotos/".$foto;
-                copy($imagen,$destino);
 
                 
-               $codigo=3;
-                
-               
+                $codigo=2;
                 
                 $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
 					
@@ -236,7 +232,7 @@
                 if ($con->query($sql) === TRUE) {
           echo "";
       } else {
-          echo "Error: " . $sql . "<br>" . $conn->error;
+          echo "Error: " . $sql . "<br>" . $con->error;
       }             
     }
 				
