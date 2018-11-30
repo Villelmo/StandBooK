@@ -19,7 +19,7 @@
 </head>
 <body body class="fixed-header">
 	<!-- header -->
-    <header id="header">
+	   <header id="header">
     <div class="container">
       <div class="navbar-backdrop">
         <div class="navbar">
@@ -89,8 +89,8 @@
                         <div class="row">
                           <div class="col">
                             <div class="img">
-                              <a href="perfil.html"><img src="img/menu/tienda1.jpg" width="275" height="140"></a>
-                              <span class="badge badge-ps4">Librería: La Leonesa</span>
+                              <a href="perfil.html"><img src="img/review/portada3.jpg" width="275" height="140"></a>
+                              <span class="badge badge-ps4">Librería: BúhoBooks</span>
                             </div>
                             <h4><a href="#">2 libros Publicados</a></h4>
                             <span>León.</span>
@@ -134,9 +134,9 @@
                 </li>
 
                 <li class="has-dropdown">
-                  <a href="#">Catalogo</a>
+                  <a href="#">El Foro</a>
                   <ul>
-                    <li><a href="Catalogo General.html">Catalogo General</a></li>
+                    <li><a href="Foros.html">Temas del foro</a></li>
                   </ul>
                 </li>
                 <li class="has-dropdown">
@@ -156,7 +156,6 @@
                     <li><a href="#">Galeria</a></li>
                     <li class="#">
                     </li>
-                    <li><a href="Foros.html">Foro</a></li>
                     <li class="has-dropdown">
                       <a href="#">Usuarios</a>
                       <ul>
@@ -172,40 +171,26 @@
               </ul>
             </nav>
           </div>
-
-      <div class="navbar-backdrop">
-        <div class="navbar">
-          <div class="navbar-right">
-            <a class="navbar-toggle"><i class="fa fa-bars"></i></a>
-            <nav class="nav">
-             <ul>
+          <div class="nav navbar-right">
+            <ul>
               <li class="hidden-xs-down"><a href="login.html">Iniciar Sesión</a></li>
-              <li class="has-dropdown">
-                  <a href="#">Registrarse</a>
-                  <ul>
-                    <li><a href="addautor.php">Como Autor</a></li>
-                    <li><a href="nuevoregistro1.php">Como Tienda</a></li>
-                  </ul>
-                </li>
+              <li class="hidden-xs-down"><a href="nuevoregistro1.php">Registrarse</a></li>
               <li><a data-toggle="search"><i class="fa fa-search"></i></a></li>
             </ul>
-               </nav>
-             </div>
-           </div>
-         </div>
+          </div>
         </div>
       </div>
       <div class="navbar-search">
         <div class="container">
-          <form method="post">
-            <input type="text" class="form-control" placeholder="Búscar...">
+          <form method="post" action="buscar.php">
+            <input type="text" data-toggle="modal" data-target="#terms" name="buscar" class="form-control" placeholder="Búscar..." onkeypress="13" required="">
             <i class="fa fa-times close"></i>
           </form>
         </div>
       </div>
     </div>
   </header>
-  <!-- /header -->
+  <!--- /header -->
 
 
   <!--Main-->
