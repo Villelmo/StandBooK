@@ -32,9 +32,9 @@
 			<?php
 			include("conexion.php");
 			
-			echo "sms1";
+			
 			if(isset($_POST["guardar"])){
-				echo "sms2";
+				
 				$nombre=$_POST["nombre"];
 				$direccion=$_POST["direccion"];
 				$telefono=$_POST["telefono"];
