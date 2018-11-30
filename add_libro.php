@@ -220,7 +220,7 @@
                 $editorial=$_POST["editorial"];
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
-
+                $codigo=2;
                 $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
                 $query = "INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
@@ -230,7 +230,7 @@
         $consul="SELECT * from libros";
         $resul=mysqli_query($con,$consul);
                 
-				$codigo=2;
+				
 				
         
         ?>
