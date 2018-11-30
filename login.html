@@ -14,6 +14,8 @@
   <!-- theme css -->
   <link rel="stylesheet" href="css/theme.min.css">
   <link rel="stylesheet" href="css/custom.css">
+
+  <script src="validaciones/iniciar_sesion.js"></script>
 </head>
 <body body class="fixed-header">
   <!-- header -->
@@ -152,14 +154,14 @@
         <div class="col-12 col-sm-8 col-md-4 mx-auto">
           <div class="card m-b-0">
             <div class="card-block">
-              <form action="profile.html">
+              <form action="profile.html" onsubmit="return validar()">
                 <div class="form-group input-icon-left m-b-10">
                   <i class="fa fa-user"></i>
-                  <input type="text" class="form-control form-control-secondary" placeholder="Usuario">
+                  <input type="text" id="usuario" class="form-control form-control-secondary" placeholder="Usuario">
                 </div>
                 <div class="form-group input-icon-left m-b-15">
                   <i class="fa fa-lock"></i>
-                  <input type="password" class="form-control form-control-secondary" placeholder="Contraseña">
+                  <input type="password" id="contraseña" class="form-control form-control-secondary" placeholder="Contraseña">
                 </div>
                 <label class="custom-control custom-checkbox custom-checkbox-primary">
                 <input type="checkbox" class="custom-control-input">
