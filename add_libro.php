@@ -227,9 +227,11 @@
 
                 
                 $consul="SELECT * from libros";
-                $res=mysqli_query($con,$consul);
-                while()
-                $codigo=mysqli_fetch_array($res); 
+                $res=$con->query($consul);
+                while(mysqli_fetch_array($res)){
+                  $codigo=$codigo+1; 
+                }
+                
                
                 
                 $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
