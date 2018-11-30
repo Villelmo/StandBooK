@@ -221,7 +221,7 @@
                 $autor=$_POST["autor"];
 
                 
-				$codigo=1;
+				$codigo=2;
 				
         $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion) VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion')";
 					
@@ -229,7 +229,7 @@
         if ($con->query($sql) === TRUE) {
   echo "";
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo "Error: " . $sql . "<br>" . $con->error;
 }
 					echo "datos guardados";
 				
