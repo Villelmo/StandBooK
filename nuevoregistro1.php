@@ -216,7 +216,13 @@
 				$telefono=$_POST["telefono"];
                 $contraseña=$_POST["contraseña"];
                 $re_contraseña=$_POST["re_contraseña"];
-				$id=3;
+
+
+                $resultado = $con->query("SELECT * FROM librerias");
+                   
+                $id=$resultado->num_rows;
+                $id=$id+1;
+			
 				
                     $sql="INSERT INTO libreria(id,clave,nombre,direccion,telefono) VALUES('$id','$contraseña','$nombre','$direccion','$telefono')";
 					
@@ -224,20 +230,15 @@
 					if ($con->query($sql) === TRUE) {
     echo "";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $con->error;
 }
 
-					$id=$id+1;
+				
 					
 				header("Location: perfil.html");
 				
             }
 
-            
-            
-   
-			
-			
             ?>
             
     <footer id="footer">
