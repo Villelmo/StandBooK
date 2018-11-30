@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="plugins/animate/animate.min.css">
+    <link rel="stylesheet" href="estil.css">
 
     <!-- theme css -->
     <link rel="stylesheet" href="css/theme.min.css">
