@@ -16,13 +16,13 @@
 
 <body body class="fixed-header">
 	<!-- header -->
-	 <header id="header">
+     <header id="header">
     <div class="container">
       <div class="navbar-backdrop">
         <div class="navbar">
           <div class="navbar-left">
             <a class="navbar-toggle"><i class="fa fa-bars"></i></a>
-            <a href="index.html" class="logo" style="color:white;">STANDBOOK</a>
+            <a href="index.html" class="logo" style="color:white;"><img src="img/logo/busqueda1.png" alt="">STANDBOOK</a>
             <nav class="nav">
               <ul>
                 <li class="has-dropdown mega-menu">
@@ -131,9 +131,9 @@
                 </li>
 
                 <li class="has-dropdown">
-                  <a href="#">El Foro</a>
+                  <a href="#">Catalogo</a>
                   <ul>
-                    <li><a href="Foros.html">Temas del foro</a></li>
+                    <li><a href="Catalogo General.html">Catalogo General</a></li>
                   </ul>
                 </li>
                 <li class="has-dropdown">
@@ -153,6 +153,7 @@
                     <li><a href="#">Galeria</a></li>
                     <li class="#">
                     </li>
+                    <li><a href="Foros.html">Foro</a></li>
                     <li class="has-dropdown">
                       <a href="#">Usuarios</a>
                       <ul>
