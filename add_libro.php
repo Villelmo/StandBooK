@@ -201,7 +201,8 @@
             <input type="textarea" rows="2" cols="50" id="descripcion" name="descripcion" placeholder="descripcion_del_libro" class="formulario_input">
               <input type="text" id="editorial" name="editorial" placeholder="editorial" class="formulario_input"> 
               <input type="text" id="autor" name="autor" placeholder="autor" class="formulario_input">   
-              <input type="number" id="precio" name="precio" placeholder="valor en cordobas del libro" class="formulario_input">          
+              <input type="number" id="precio" name="precio" placeholder="valor en cordobas del libro" class="formulario_input">
+              <input type="file" name="imagen" placeholder="imagen" class="formulario_input">          
             <input type="submit" name="guardar"  value="Guardar" class="formulario_input">
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
 			</form>
@@ -220,23 +221,18 @@
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
 
+                $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+
+                $query = "INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
+              
+                $resultado = $con->query($query);
+
         $consul="SELECT * from libros";
         $resul=mysqli_query($con,$consul);
                 
 				$codigo=2;
 				
-        $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion) VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion')";
-					
-					
-        if ($con->query($sql) === TRUE) {
-  echo "";
-} else {
-  echo "Error: " . $sql . "<br>" . $con->error;
-}
-					echo "datos guardados";
-				
-            }
-
+        
         ?>
 
     <footer id="footer">
