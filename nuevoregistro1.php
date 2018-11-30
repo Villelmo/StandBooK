@@ -193,7 +193,7 @@
     <div class="overlay"></div>
     <div class="container">      
 			<form action="nuevoregistro1.php" method="POST" name="formu" id="formula" class="formulario">
-			<h1 class="formulario_titulo">Registro</h1>
+			<h1 class="formulario_titulo">Registro de tiendas</h1>
 	
             <input type="text" name="nombre" id="nombre" placeholder="nombre" class="formulario_input">
             <input type="textarea" rows="3" cols="50" id="direccion" name="direccion" placeholder="direccion" class="formulario_input">
