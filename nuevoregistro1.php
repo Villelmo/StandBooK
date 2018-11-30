@@ -16,13 +16,13 @@
 
 <body body class="fixed-header">
 	<!-- header -->
-	 <header id="header">
+    <header id="header">
     <div class="container">
       <div class="navbar-backdrop">
         <div class="navbar">
           <div class="navbar-left">
             <a class="navbar-toggle"><i class="fa fa-bars"></i></a>
-            <a href="index.html" class="logo" style="color:white;">STANDBOOK</a>
+            <a href="index.html" class="logo" style="color:white;"><img src="img/logo/busqueda1.png" alt="">STANDBOOK</a>
             <nav class="nav">
               <ul>
                 <li class="has-dropdown mega-menu">
@@ -131,9 +131,9 @@
                 </li>
 
                 <li class="has-dropdown">
-                  <a href="#">El Foro</a>
+                  <a href="#">Catalogo</a>
                   <ul>
-                    <li><a href="Foros.html">Temas del foro</a></li>
+                    <li><a href="Catalogo General.html">Catalogo General</a></li>
                   </ul>
                 </li>
                 <li class="has-dropdown">
@@ -153,6 +153,7 @@
                     <li><a href="#">Galeria</a></li>
                     <li class="#">
                     </li>
+                    <li><a href="Foros.html">Foro</a></li>
                     <li class="has-dropdown">
                       <a href="#">Usuarios</a>
                       <ul>
@@ -168,13 +169,27 @@
               </ul>
             </nav>
           </div>
-          <div class="nav navbar-right">
-            <ul>
+
+      <div class="navbar-backdrop">
+        <div class="navbar">
+          <div class="navbar-right">
+            <a class="navbar-toggle"><i class="fa fa-bars"></i></a>
+            <nav class="nav">
+             <ul>
               <li class="hidden-xs-down"><a href="login.html">Iniciar Sesión</a></li>
-              <li class="hidden-xs-down"><a href="nuevoregistro1.php">Registrarse</a></li>
+              <li class="has-dropdown">
+                  <a href="#">Registrarse</a>
+                  <ul>
+                    <li><a href="addautor.php">Como Autor</a></li>
+                    <li><a href="nuevoregistro1.php">Como Tienda</a></li>
+                  </ul>
+                </li>
               <li><a data-toggle="search"><i class="fa fa-search"></i></a></li>
             </ul>
-          </div>
+               </nav>
+             </div>
+           </div>
+         </div>
         </div>
       </div>
       <div class="navbar-search">
@@ -193,7 +208,7 @@
     <div class="overlay"></div>
     <div class="container">      
 			<form action="nuevoregistro1.php" method="POST" name="formu" id="formula" class="formulario">
-			<h1 class="formulario_titulo">Registro</h1>
+			<h1 class="formulario_titulo">Registro de tiendas</h1>
 	
             <input type="text" name="nombre" id="nombre" placeholder="nombre" class="formulario_input">
             <input type="textarea" rows="3" cols="50" id="direccion" name="direccion" placeholder="direccion" class="formulario_input">
@@ -216,7 +231,13 @@
 				$telefono=$_POST["telefono"];
                 $contraseña=$_POST["contraseña"];
                 $re_contraseña=$_POST["re_contraseña"];
-				$id=3;
+
+
+                $resultado = $con->query("SELECT * FROM libreria");
+                   
+                $id=$resultado->num_rows;
+                $id=$id+1;
+			
 				
                     $sql="INSERT INTO libreria(id,clave,nombre,direccion,telefono) VALUES('$id','$contraseña','$nombre','$direccion','$telefono')";
 					
@@ -224,20 +245,12 @@
 					if ($con->query($sql) === TRUE) {
     echo "";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $con->error;
 }
 
-					$id=$id+1;
-					
-				
 				
             }
 
-            
-            
-   
-			
-			
             ?>
             
     <footer id="footer">
