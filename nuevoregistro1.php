@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="css/theme.min.css">
   <link rel="stylesheet" href="css/custom.css">
 
-	<script type="text/javascript" src="functions.js"></script>	
+  <script type="text/javascript" src="functions.js"></script>	
+  <script type="text/javascript" src="validaciones/ValidacionRegistro.js"></script>
 </head>
 
 <body body class="fixed-header">
@@ -288,7 +289,7 @@
     </div>
   </footer>
       
-  <script src="validaciones/ValidacionRegistro.js"></script>
+ 
 
 </body>
 </html>
