@@ -243,23 +243,23 @@
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
                 $foto=$_addslashes(file_get_contents($_FILES["foto"]["tmp_name"]));
-                
+
                 
 				$codigo=1;
 				
-                    mysqli_query($con,"INSERT INTO libros VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$foto','$descripcion')");
-					$codigo=$codigo+1;
+        $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,imagen,descripcion) VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$foto','$descripcion')";
 					
+					
+        if ($con->query($sql) === TRUE) {
+  echo "";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 					echo "datos guardados";
 				
             }
 
-            
-            
-
-			
-			
-			?>
+        ?>
 			
 </body>
 </html>
