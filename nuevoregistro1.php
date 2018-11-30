@@ -192,14 +192,14 @@
 					
 					
 					if ($con->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 					$id=$id+1;
 					
-					echo "datos guardados";
+				
 				
             }
 
