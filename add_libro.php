@@ -226,8 +226,10 @@
                 copy($imagen,$destino);
 
                 
-
-                $codigo=mysqli_fetch_array(); 
+                $consul="SELECT * from libros";
+                $res=mysqli_query($con,$consul);
+                while()
+                $codigo=mysqli_fetch_array($res); 
                
                 
                 $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
