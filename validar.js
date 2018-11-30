@@ -1,3 +1,3 @@
-function validar(){
-
+function validar() {
+	var usuario
 }
