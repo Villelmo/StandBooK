@@ -220,11 +220,15 @@
                 $editorial=$_POST["editorial"];
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
+
+                $tabla="libros";
                
                 $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
-
-                
-                $codigo=2;
+ 
+                $resultado = $con->query("SELECT * FROM libros");
+                   
+                $codigo=$resultado->num_rows;
+                $codigo=$codigo+1;
                 
                 $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion,imagen)VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion','$imagen')";
 					
