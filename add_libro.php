@@ -226,10 +226,7 @@
                 copy($imagen,$destino);
 
                 
-                $consul="SELECT * from libros";
-                $res=mysqli_connect($con,$consul);
-                
-                $codigo=mysql_num_rows($res);
+               $codigo=3;
                 
                
                 
