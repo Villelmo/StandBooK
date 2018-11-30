@@ -242,7 +242,8 @@
                 $editorial=$_POST["editorial"];
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
-                $foto=$_FILES["foto"];
+                $foto=$_addslashes(file_get_contents($_FILES["foto"]["tmp_name"]));
+                
                 
 				$codigo=1;
 				
