@@ -1,22 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-	<title>Registro de libro</title>
-	<link rel="stylesheet" href="estil.css" type="text/css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-  <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="plugins/animate/animate.min.css">
-  <!-- theme css -->
-  <link rel="stylesheet" href="css/theme.min.css">
-  <link rel="stylesheet" href="css/custom.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Perfil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/animate/animate.min.css">
 
-	<script type="text/javascript" src="functions.js"></script>
-  <script src="validacion/validacion.js"></script>
+    <!-- theme css -->
+    <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
-
 <body body class="fixed-header">
- <!-- /header -->
-<header id="header">
+	<!-- header -->
+  <header id="header">
     <div class="container">
       <div class="navbar-backdrop">
         <div class="navbar">
@@ -25,9 +25,6 @@
             <a href="index.html" class="logo" style="color:white;">STANDBOOK</a>
             <nav class="nav">
               <ul>
-               <!-- <li class="has-dropdown">
-                  <a href="index.html">Inicio</a>
-                </li>-->
                 <li class="has-dropdown mega-menu">
                   <a href="#">Categorias</a>
                   <ul>
@@ -79,20 +76,64 @@
                     </li>
                   </ul>
                 </li>
-                <li class="has-dropdown">
+                <!--Tiendas-->
+
+               <li class="has-dropdown mega-menu">
                   <a href="#">Tiendas</a>
                   <ul>
-                      <li><a href="#">Lista de Tiendas</a></li>
-                      <li><a href="#">Post tiendas</a></li>
+                    <li>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col">
+                            <div class="img">
+                              <a href="perfil.html"><img src="img/menu/tienda1.jpg" width="275" height="140"></a>
+                              <span class="badge badge-ps4">Librería: La Leonesa</span>
+                            </div>
+                            <h4><a href="#">2 libros Publicados</a></h4>
+                            <span>León.</span>
+                          </div>
+                          <div class="col">
+                            <div class="img">
+                              <a href="#"><img src="img/menu/tienda2.jpg" width="275" height="140"></a>
+                              <span class="badge badge-steam">Librería: La Fatima</span>
+                            </div>
+                            <h4><a href="#">0 Libros Publicados</a></h4>
+                            <span>Chichigalpa.</span>
+                          </div>
+                          <div class="col">
+                            <div class="img">
+                              <a href="#"><img src="img/menu/tienda3.jpg" width="275" height="140"></a>
+                              <span class="badge badge-xbox-one">Librería: Los Angeles</span>
+                            </div>
+                            <h4><a href="#">0 Libros Publicados</a></h4>
+                            <span>León.</span>
+                          </div>
+                          <div class="col">
+                            <div class="img">
+                              <a href="#"><img src="img/menu/tienda4.jpg" width="275" height="140"></a>
+                              <span class="badge badge-ps4">Librería: Cristo Rendención</span>
+                            </div>
+                            <h4><a href="#">0 Libros Publicados</a></h4>
+                            <span>Managua.</span>
+                          </div>
+                          <div class="col">
+                            <div class="img">
+                              <a href="#"><img src="img/menu/tienda5.jpg" width="275" height="140"></a>
+                              <span class="badge badge-pc">Librería: Rafaina</span>
+                            </div>
+                            <h4><a href="game-post.html">0 Libros Publicados</a></h4>
+                            <span>El Sauce, León.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
                   </ul>
                 </li>
 
                 <li class="has-dropdown">
                   <a href="#">El Foro</a>
                   <ul>
-                    <li><a href="#">Temas del foro</a></li>
-                    <li><a href="#">Mensajes</a></li>
-                    <li><a href="#">Crear Foro</a></li>
+                    <li><a href="Foros.html">Temas del foro</a></li>
                   </ul>
                 </li>
                 <li class="has-dropdown">
@@ -105,25 +146,12 @@
                       <a href="#">Opiniones</a>
                       <ul>
                         <li><a href="#">Lista de opiniones</a></li>
-                        <li><a href="#">Revisar publicación</a></li>
                       </ul>
                     </li>
-                    <li class="has-dropdown">
-                      <a href="#">Los foros</a>
-                      <ul>
-                        <li><a href="#">Foro</a></li>
-                        <li><a href="#">Tema del foro</a></li>
-                        <li><a href="#">Mensaje del Foro</a></li>
-                        <li><a href="#">Crear Foro</a></li>
-                      </ul>
+                    <li class="#">
                     </li>
                     <li><a href="#">Galeria</a></li>
                     <li class="#">
-                      <a href="#">Videos</a>
-                      <ul>
-                        <li><a href="#">Lista de videos</a></li>
-                        <li><a href="#">post video</a></li>
-                      </ul>
                     </li>
                     <li class="has-dropdown">
                       <a href="#">Usuarios</a>
