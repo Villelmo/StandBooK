@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
 	<title>Registro</title>
 	<link rel="stylesheet" href="estil.css" type="text/css">
@@ -245,7 +246,11 @@
 					echo "datos guardados";
 				
             }
+<<<<<<< HEAD
         ?>
             
+=======
+			?>
+>>>>>>> 3239e355b8db8bb2c0b1c92cb73ddd0331244b1e
 </body>
 </html>
