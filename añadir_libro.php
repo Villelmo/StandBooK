@@ -178,7 +178,7 @@
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
 			</form>
     </div>
-
+    </section>
     <footer id="footer">
     <div class="container">
       <div class="row">
@@ -228,6 +228,7 @@
         <p>Copyright &copy; 2018 <a href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank">Standbook</a>. Todos los derechos recervados.</p>
       </div>
     </div>
+
   </footer>
 
 			<?php
