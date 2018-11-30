@@ -201,7 +201,6 @@
             <input type="textarea" rows="2" cols="50" id="descripcion" name="descripcion" placeholder="descripcion_del_libro" class="formulario_input">
               <input type="text" id="editorial" name="editorial" placeholder="editorial" class="formulario_input"> 
               <input type="text" id="autor" name="autor" placeholder="autor" class="formulario_input">   
-              <input type="file" id="foto" name="foto" placeholder="imagen" class="formulario_input">  
               <input type="number" id="precio" name="precio" placeholder="valor en cordobas del libro" class="formulario_input">          
             <input type="submit" name="guardar"  value="Guardar" class="formulario_input">
             <input type="reset" name="cancelar"  value="Cancelar" class="formulario_input">
@@ -220,12 +219,11 @@
                 $editorial=$_POST["editorial"];
                 $precio=$_POST["precio"];
                 $autor=$_POST["autor"];
-                $foto=$_addslashes(file_get_contents($_FILES["foto"]["tmp_name"]));
 
                 
 				$codigo=1;
 				
-        $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,imagen,descripcion) VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$foto','$descripcion')";
+        $sql="INSERT INTO libros(codigo,titulo,idioma,precio,autor,editorial,descripcion) VALUES('$codigo','$titulo','$idioma','$precio','$autor','$editorial','$descripcion')";
 					
 					
         if ($con->query($sql) === TRUE) {
