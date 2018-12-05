@@ -171,13 +171,27 @@
               </ul>
             </nav>
           </div>
-          <div class="nav navbar-right">
-            <ul>
+
+      <div class="navbar-backdrop">
+        <div class="navbar">
+          <div class="navbar-right">             
+            <a class="navbar-toggle"><i class="fa fa-user"></i></a>
+            <nav class="nav">
+             <ul>
               <li class="hidden-xs-down"><a href="login.html">Iniciar Sesión</a></li>
-              <li class="hidden-xs-down"><a href="nuevoregistro1.php">Registrarse</a></li>
+              <li class="has-dropdown hidden-xs-down">
+                  <a href="#">Registrarse</a>
+                  <ul>
+                    <li><a href="addautor.php">Como Autor</a></li>
+                    <li><a href="nuevoregistro1.php">Como Tienda</a></li>
+                  </ul>
+                </li>
               <li><a data-toggle="search"><i class="fa fa-search"></i></a></li>
             </ul>
-          </div>
+               </nav>
+             </div>
+           </div>
+           
         </div>
       </div>
       <div class="navbar-search">
